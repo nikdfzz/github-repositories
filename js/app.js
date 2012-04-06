@@ -50,7 +50,10 @@ window.App = {
 		jQuery('.user_links li[rel="notifications"]').on('click', function(event) {
 			event.preventDefault();
 			event.stopPropagation();
-			window.open("https://github.com/inbox/notifications", '_blank');
+			jQuery('<div id="notifications"/>').load('https://github.com/inbox/notifications #inbox .item', function() {
+			  jQuery('[rel="notifications"]').append(this);
+			});
+      // window.open("https://github.com/inbox/notifications", '_blank');
 		});
 
 		// Bind logout click event.

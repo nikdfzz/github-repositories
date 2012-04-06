@@ -1058,11 +1058,51 @@ button.positive:active {
 }
 
 .user_links li[rel="notifications"] {
-	background-position: -32px 4px;
+    background-position: -32px 4px;
 }
 
 .user_links li[rel="notifications"]:hover {
-	background-position-y: -34px;
+    background-position-y: -34px;
+}
+
+.user_links li[rel="notifications"] #notifications {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 17px;
+    width: 400px;
+    background: white;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    padding: 8px 10px;
+    z-index: 5;
+}
+.user_links li[rel="notifications"] #notifications span {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: -5px;
+    width: 400px;
+    background: white;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    padding: 8px 10px;
+    z-index: 5;
+}
+.user_links li[rel="notifications"] #notifications:before {
+    position: absolute;
+    right: 65px;
+    top: -10px;
+    z-index: 10;
+    border-bottom: 10px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    width: 0;
+    height: 0;
+    content: '';
+    display: block;
 }
 
 .user_links li[rel="extension_settings"] {
@@ -1081,7 +1121,7 @@ button.positive:active {
     background-position-y: -34px;
 }
 
-.user_links li .unread {
+.user_links li > .unread {
 	top: -7px;
 	left: 18px;
 	position: absolute;
